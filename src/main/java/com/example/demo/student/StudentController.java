@@ -1,5 +1,6 @@
 package com.example.demo.student;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/students")
+@CrossOrigin(origins = "http://localhost:3000")
 public class StudentController {
 
   private static final List<Student> STUDENTS = new ArrayList<>(Arrays.asList(
